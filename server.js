@@ -1,11 +1,8 @@
-// const express = require("express");
 const { connectionToDb } = require("./db");
 const app = require("./app");
 require("dotenv").config();
 
 const port = process.env.port;
-
-// const app = express();
 
 connectionToDb();
 const server = app.listen(port, () => {

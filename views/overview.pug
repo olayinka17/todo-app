@@ -5,12 +5,10 @@ block content
     main.overview 
         if (user)    
             h1 My Tasks Overview
-
             .task-overview
                 a.tasks__a(href='/completed') View Completed Tasks
                 a.tasks__a(href='/pending') View Pending Tasks
                 a.tasks__a(href='/add-tasks') Create task
-
             if tasks.length
                 each task in tasks
                     .task-card

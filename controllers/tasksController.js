@@ -4,12 +4,9 @@ const CustomError = require("../utils/CustomError");
 
 const getAllTasks = CatchAsync(async (req, res) => {
   let filter = { user: req.user.id };
-  if (req.query.state && ["pending", "completed"].includes(req.query.state)) {
+  if (req.query.state) {
     filter.state = req.query.state;
   }
-  // if (req.query.state) {
-  //   filter.state = req.query.state;
-  // }
   const tasks = await Tasks.find(filter);
   console.log(filter);
   res.status(200).json({

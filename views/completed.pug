@@ -1,11 +1,8 @@
 extends base 
 
 block content 
-
     h1 Completed Tasks
-
     a.back-link(href='/') ← Back to All Tasks
-
     if tasks.length
         each task in tasks
             .task-card

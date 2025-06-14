@@ -107,13 +107,13 @@ h1 {
 
 /* Success alert (green) */
 .alert--success {
-  background-color: #4bb543; /* nice green */
+  background-color: #4bb543;
   border: 1px solid #3e9438;
 }
 
 /* Error alert (red) */
 .alert--error {
-  background-color: #ff4c4c; /* bright red */
+  background-color: #ff4c4c;
   border: 1px solid #cc3a3a;
 }
 
@@ -219,8 +219,8 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
-  background-color: #f0f2f5; /* Optional: light background for contrast */
+  min-height: 100vh;
+  background-color: #f0f2f5;
   padding: 1rem;
 }
 
@@ -364,10 +364,7 @@ form {
 }
 
 .signup {
-  /* margin: 0; */
   font-family: "Lato", sans-serif;
-  /* background: url("/img/signup-bg.jpg") no-repeat center center/cover; */
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
