@@ -1,0 +1,23 @@
+extends base 
+
+
+block content 
+    main.overview 
+        if (user)    
+            h1 My Tasks Overview
+
+            .task-overview
+                a.tasks__a(href='/completed') View Completed Tasks
+                a.tasks__a(href='/pending') View Pending Tasks
+                a.tasks__a(href='/add-tasks') Create task
+
+            if tasks.length
+                each task in tasks
+                    .task-card
+                    h3= task.title
+                    p= `State: ${task.state.toUpperCase()}` 
+                    a.tasks__a(href=`/tasks/${task._id}` ) View Task
+            else
+                p No tasks found.
+        else 
+            h3.generic Log in to view your tasks

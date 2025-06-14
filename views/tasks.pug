@@ -1,0 +1,13 @@
+extends base 
+
+block content 
+    h1= task.title
+
+    p= task.content
+    p= `State: ${task.state.toUpperCase()}`
+
+    a.tasks__a(href='/') ← Back to All Tasks
+    - if (task.state === 'pending')
+            button.tasks__btn.completed__btn(type='button', data-task-id=task._id) Mark as Completed
+    .test
+        button.tasks__btn.deleted__btn(data-task-id=task._id) Delete Task

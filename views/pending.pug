@@ -1,0 +1,15 @@
+extends base 
+
+block content 
+    h1 Pending Tasks
+
+    a.back-link(href='/') ← Back to All Tasks
+
+    if tasks.length
+        each task in tasks
+            .task-card
+                h3= task.title
+                p= task.description
+                a(href=`/tasks/${task._id}`) View Task
+    else
+        p No pending tasks.

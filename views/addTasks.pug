@@ -1,0 +1,17 @@
+extends base 
+
+block content 
+
+    .add-task-wrapper 
+        form.add-task-form 
+            h1 Add a New Task
+
+            .form-group
+                label(for='title') Title
+                input#title.form-control(type='text', name='title', required)
+
+            .form-group
+                label(for='content') Content
+                textarea#content.form-control(name='content', rows='4', required)
+
+            button( class='btn btn-primary') Add Task

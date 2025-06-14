@@ -1,0 +1,23 @@
+extends base 
+
+block content 
+    section.signup
+        .signup-card
+            h1 Create an Account
+            form.form.form__signup
+                .form-group.signup-form
+                        label(for="userName") Username
+                        input(type="text", name="userName", id="userName", required)
+                .form-group.signup-form
+                    label(for="email") Email
+                    input(type="email", name="email", id="email", required)
+                .form-group.signup-form
+                    label(for="password") Password
+                    input(type="password", name="password", id="password", required)
+                .form-group.signup-form
+                    label(for="confirmedPassword") Confirm Password
+                    input(type="password", name="confirmPassword", id="confirmedPassword", required)
+                button.signup-btn(type="submit") Sign Up
+            .signup-footer
+                p Already have an account?
+                a(href="/login") Login
