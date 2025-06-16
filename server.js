@@ -5,8 +5,6 @@ require("dotenv").config();
 
 const port = process.env.PORT;
 
-const cors = require("cors");
-
 connectionToDb();
 
 app.use(
