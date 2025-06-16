@@ -3,12 +3,11 @@ const addTasks = async (title, content) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://127.0.0.1:7000/api/v1/tasks",
+      url: "/api/v1/tasks",
       data: {
         title,
         content,
       },
-      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "Task addedd successfully");

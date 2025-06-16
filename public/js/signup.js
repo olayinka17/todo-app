@@ -4,14 +4,13 @@ const signup = async (username, email, password, confirmedPassword) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://127.0.0.1:7000/api/v1/users/signup",
+      url: "/api/v1/users/signup",
       data: {
         username,
         email,
         password,
         confirmedPassword,
       },
-      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "Sign up successful. welcome aboard.");

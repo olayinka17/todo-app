@@ -4,9 +4,8 @@ const updateTasks = async (taskId) => {
   try {
     const res = await axios({
       method: "PATCH",
-      url: `http://127.0.0.1:7000/api/v1/tasks/${taskId}`,
+      url: `/api/v1/tasks/${taskId}`,
       data: { state: "completed" },
-      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "task updated successfully");
@@ -24,8 +23,7 @@ const deleteTasks = async (taskId) => {
   try {
     const res = await axios({
       method: "DELETE",
-      url: `http://127.0.0.1:7000/api/v1/tasks/${taskId}`,
-      withCredentials: true,
+      url: `/api/v1/tasks/${taskId}`,
     });
     if (res.data.status === "success") {
       location.assign("/");
