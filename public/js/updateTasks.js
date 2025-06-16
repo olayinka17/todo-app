@@ -6,6 +6,7 @@ const updateTasks = async (taskId) => {
       method: "PATCH",
       url: `http://127.0.0.1:7000/api/v1/tasks/${taskId}`,
       data: { state: "completed" },
+      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "task updated successfully");
@@ -24,6 +25,7 @@ const deleteTasks = async (taskId) => {
     const res = await axios({
       method: "DELETE",
       url: `http://127.0.0.1:7000/api/v1/tasks/${taskId}`,
+      withCredentials: true,
     });
     if (res.data.status === "success") {
       location.assign("/");

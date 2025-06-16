@@ -11,6 +11,7 @@ const signup = async (username, email, password, confirmedPassword) => {
         password,
         confirmedPassword,
       },
+      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "Sign up successful. welcome aboard.");

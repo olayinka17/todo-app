@@ -8,6 +8,7 @@ const addTasks = async (title, content) => {
         title,
         content,
       },
+      withCredentials: true,
     });
     if (res.data.status === "success") {
       showAlert("success", "Task addedd successfully");

@@ -9,6 +9,7 @@ const login = async (email, password) => {
         email,
         password,
       },
+      withCredentials: true,
     });
 
     if (res.data.status === "success") {
@@ -27,6 +28,7 @@ const logOut = async () => {
     const res = await axios({
       method: "GET",
       url: "http://127.0.0.1:7000/api/v1/users/logout",
+      withCredentials: true,
     });
     if ((res.data.status = "success")) location.assign("/login");
   } catch (err) {
