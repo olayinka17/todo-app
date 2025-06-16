@@ -2,7 +2,7 @@ const { connectionToDb } = require("./db");
 const app = require("./app");
 require("dotenv").config();
 
-const port = process.env.port;
+const port = process.env.PORT;
 
 connectionToDb();
 const server = app.listen(port, () => {
