@@ -2,7 +2,10 @@ const Task = require("../model/tasks");
 const CatchAsync = require("../utils/catchAsync");
 
 const getOverviewPage = CatchAsync(async (req, res, next) => {
-  let filter = { user: res.locals.user.id };
+  let filter;
+  if (filter) {
+    filter = { user: res.locals.user.id };
+  }
   const tasks = await Task.find(filter);
 
   res.status(200).render("overview", {
