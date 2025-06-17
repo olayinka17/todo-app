@@ -311,7 +311,7 @@ form {
 .login__form-group {
   margin-bottom: 1.5rem;
   max-width: 100%;
-  width: 330px;
+  max-width: 330px;
 }
 
 .login__form-group label {
@@ -390,7 +390,7 @@ form {
 
 .form__signup {
   margin-bottom: 1.5rem;
-  width: 450px;
+  max-width: 450px;
 }
 
 .form-row {
