@@ -3,7 +3,7 @@ const CatchAsync = require("../utils/catchAsync");
 
 const getOverviewPage = CatchAsync(async (req, res, next) => {
   let filter;
-  if (res.locals.user.id) {
+  if (res.locals.user && res.locals.user.id) {
     filter = { user: res.locals.user.id };
   }
   const tasks = await Task.find(filter);
