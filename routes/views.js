@@ -4,7 +4,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 const Router = express.Router();
 
-Router.get("/", authMiddleware.isLoggedIn, viewsController.getOverviewPage);
+Router.get("/", viewsController.getOverviewPage);
 Router.get(
   "/completed",
   authMiddleware.isLoggedIn,
