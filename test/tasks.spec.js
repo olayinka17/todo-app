@@ -61,7 +61,7 @@ describe("tasks API", () => {
       .patch("/api/v1/tasks/68474a18ca19357ad2f7549f")
       .set("authorization", `Bearer ${token}`)
       .send({
-        status: "completed",
+        state: "completed",
       });
 
     expect(response.statusCode).toBe(404);

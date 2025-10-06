@@ -30,11 +30,7 @@ const getTasksById = CatchAsync(async (req, res, next) => {
     },
   });
 });
-const setUserIds = (req, res, next) => {
-  const tasksInfo = req.body;
-  if (!tasksInfo.user) tasksInfo.user = req.user.id;
-  next();
-};
+
 
 const createTasks = CatchAsync(async (req, res) => {
   const tasksInfo = req.body;
